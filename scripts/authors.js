@@ -243,7 +243,7 @@ function AuthorCard() {
 
         const image = CreateElem("img", ustBilgi);
         image.className = "senarist";
-        image.src = "../img/" + author.imageUrl;
+        image.src = "./img/" + author.imageUrl;
         image.alt = "kitap kapak Resmi";
 
         const divElement2 = CreateElem("div", textContainer);

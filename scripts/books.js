@@ -247,7 +247,7 @@ function SearchBook(value) {
             gallery.appendChild(bookCard);
     
             const bookImg = document.createElement("img");
-            bookImg.src = "../img/" + book.image;
+            bookImg.src = "./img/" + book.image;
             bookImg.alt = "Kitap Kapak Resmi";
             bookCard.appendChild(bookImg);
     
