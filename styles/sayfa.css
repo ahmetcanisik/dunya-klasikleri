@@ -1,0 +1,180 @@
+@import './fonts.css';
+
+* {
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+
+/* Temel stil ayarları */
+body {
+  font-family: "Sofia", sans-serif;
+  /* Tüm kenarlarda sıfır dolgu bırakır */
+  color: rgb(0, 0, 0);
+  /* Metin rengini koyu gri yapar */
+  background-color: #f3f3f3;
+  background-color: rgba(133, 91, 8, 0.8);
+  /* Arka planda beyaz ve transparan renk */
+  background-image: url('kitap.jpg');
+  /* Transparan görsel */
+  background-blend-mode: overlay;
+  /* Görsel ile renk arasında harmanlama modu */
+  background-size: cover;
+  /* Görselin tamamını kaplayacak şekilde boyutlandırma */
+  background-repeat: repeat;
+  background-size: auto;
+  /* Görselin doğal boyutunu kullanır */
+  background-position: center;
+  font-size: xx-large;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  /* Liste işaretlerini kaldırır */
+  padding: 0;
+  /* Listede dolgu bırakmaz */
+  background-color: #000000;
+  /* Arka plan rengini koyu gri yapar */
+  margin: 0;
+  /* Tüm kenarlarda sıfır boşluk bırakır */
+  display: flex;
+  /* Liste öğelerini yatay hizalar */
+  justify-content: center;
+  /* Liste öğelerini ortalar */
+  margin-top: 0%;
+}
+
+nav ul li {
+  margin: 0;
+  /* Liste öğeleri arasında boşluk bırakmaz */
+}
+
+nav ul li a {
+  display: block;
+  /* Bağlantıları blok seviyesinde yapar */
+  padding: 15px 20px;
+  /* Bağlantıların etrafında iç boşluk ekler */
+  margin: 0px;
+  color: #fff;
+  /* Bağlantı metin rengini beyaz yapar */
+  text-decoration: none;
+  /* Bağlantılardaki alt çizgiyi kaldırır */
+}
+
+nav ul li a:hover {
+  background-color: #575757;
+  /* Fare üzerine geldiğinde arka plan rengini koyu gri yapar */
+}
+
+main {
+  padding: 5px, 5px, 70px, 70px;
+  /* Ana içeriğin etrafında iç boşluk ekler */
+}
+
+footer {
+  background-color: #000000;
+  /* Alt bilgi arka plan rengini siyah yapar */
+  color: #ffffff;
+  text-align: center;
+  /* Metni ortalar */
+  padding: 5px;
+  /* Alt bilginin etrafında iç boşluk ekler */
+  position: fixed;
+  /* Alt bilgiyi sayfanın altında sabitler */
+  bottom: 0;
+  /* Alt bilgiyi sayfanın en altına yerleştirir */
+  width: 100%;
+  /* Alt bilgiyi tam genişlikte yapar */
+}
+
+img {
+  border: 10px solid #000000;
+}
+
+.sinir {
+  border: 10px solid rgb(0, 0, 0);
+  background-color: rgba(134, 100, 55, 0.678);
+}
+
+button {
+  font-size: 40px;
+  background-color: #774303;
+  font-family: "Sofia", sans-serif;
+}
+
+input {
+  font-size: 50px;
+  background-color: #774303;
+  color: #000000;
+}
+
+::placeholder {
+  color: #000000;
+  font-family: "Sofia", sans-serif;
+}
+
+.book.active {
+  display: block;
+  /* Eşleşen kitaplar görünür olacak */
+}
+
+.book img {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.search-section {
+  margin-bottom: 20px;
+}
+
+p {
+  white-space: 10px;
+}
+
+.text-container {
+  max-height: 300px;
+  /* Görünen yükseklik sınırı */
+  overflow: hidden;
+  /* Taşan metni gizler */
+  position: relative;
+  transition: max-height 2.0s ease;
+  /* Yumuşak açılma efekti */
+  border-radius: 5px;
+}
+
+.text-container:hover {
+  max-height: 10000px;
+  /* Hover ile yüksekliği artır */
+}
+
+.text-container::after {
+  content: '';
+  /* Görsel bir gölge eklemek için */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(86, 50, 11));
+  pointer-events: none;
+  /* Hover alanını etkilemesin */
+  transition: opacity 2.0s ease;
+}
+
+.text-container:hover::after {
+  opacity: 0;
+  /* Hover durumunda gölgeyi gizle */
+}
+
+.senarist {
+  display: flex;
+  float: right;
+  top: 0;
+}
+
+.ust-bilgi {
+  display: flex;
+  justify-content: space-between;
+}
